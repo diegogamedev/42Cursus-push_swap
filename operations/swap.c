@@ -1,14 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   swap.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/16 19:59:22 by dienasci          #+#    #+#             */
+/*   Updated: 2022/01/16 20:01:24 by dienasci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 void	swap_a(int **a, int silent, size_t size)
 {
-	int		temp;
+	int	temp;
 
-	if(!silent)
+	if (!silent)
 		write(1, "sa\n", 4);
-	if((*a) == NULL)
-		return;
-	if(size > 1)
+	if ((*a) == NULL)
+		return ;
+	if (size > 1)
 	{
 		temp = (*a)[0];
 		(*a)[0] = (*a)[1];
@@ -18,7 +30,7 @@ void	swap_a(int **a, int silent, size_t size)
 
 void	swap_b(int **b, int silent, size_t size)
 {
-	if(!silent)
+	if (!silent)
 		write(1, "sb\n", 4);
 	swap_a(b, 1, size);
 }

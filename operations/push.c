@@ -1,54 +1,67 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/16 19:59:10 by dienasci          #+#    #+#             */
+/*   Updated: 2022/01/16 20:00:43 by dienasci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 #include "../includes/libft.h"
-#include <stdio.h>
-#include <string.h>
+
+static size_t	insert_at(int ***array, size_t og_sz, int value, int index)
+{
+	int	*hold;
+	int	i;
+
+	i = 0;
+	hold = malloc(og_sz * sizeof(int));
+	ft_memcpy(hold, (*(*array)), og_sz * sizeof(int));
+	free((*(*array)));
+	(*(*array)) = malloc((og_sz + 1) * sizeof(int));
+	(*(*array))[index] = value;
+	while ((size_t)i++ < (og_sz))
+		(*(*array))[i] = hold[i - 1];
+	free(hold);
+	return (og_sz + 1);
+}
+
+static size_t	remove_head(int ***array, size_t og_sz)
+{
+	int	*hold;
+	int	i;
+
+	i = 0;
+	hold = malloc(og_sz * sizeof(int));
+	ft_memcpy(hold, (*(*array)), og_sz * sizeof(int));
+	free((*(*array)));
+	(*(*array)) = malloc((og_sz - 1) * sizeof(int));
+	while ((size_t)i++ < (og_sz))
+		(*(*array))[i - 1] = hold[i];
+	free(hold);
+	return (og_sz - 1);
+}
 
 void	push_a(int **a, size_t sza, int **b, size_t szb)
 {
-	int	temp;
-	int	*x;
-	int	*z;
-	int	i;
-
 	write(1, "pa\n", 4);
-	i = 0;
-	if(szb != 0)
+	if (szb != 0)
 	{
-		x = malloc(sza * sizeof(int));
-		ft_memcpy(x, *a, sza);
-		printf("Copying A:");
-		print_array(x, sza);
-		z = malloc(szb * sizeof(int));
-		ft_memcpy(z, *b, szb);
-		printf("Copying B:");
-		print_array(z, szb);
-		temp = (*b)[0];
-
-		free(*a);
-		*a = malloc((sza + 1) * sizeof(int));
-		(*a)[0] = temp;
-		while (i++ < (sza))
-			(*a)[i] = x[i - 1];
-		free(*b);
-		*b = malloc((szb - 1) * sizeof(int));
-		while (i++ < (szb))
-			(*b)[i - 1] = z[i];
-		free(x);
-		free(z);
+		insert_at(&a, sza, (*b)[0], 0);
+		remove_head(&b, szb);
 	}
 }
 
 void	push_b(int **a, size_t sza, int **b, size_t szb)
 {
-	int temp;
-	int *x;
-	int *z;
-
 	write(1, "pb\n", 4);
 	if (sza != 0)
 	{
-		x = ft_memcpy(x, *a, sza);
-		z = ft_memcpy(z, *b, szb);
-		temp = (*a)[0];
+		insert_at(&b, szb, (*a)[0], 0);
+		remove_head(&a, sza);
 	}
 }
