@@ -6,13 +6,13 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/12 20:55:38 by dienasci          #+#    #+#             */
-/*   Updated: 2022/01/11 22:30:05 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/01/23 15:24:36 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-static int	ft_isspace(int c)
+int	ft_isspace(int c)
 {
 	if (c == ' ' || c == '\t' || c == '\f')
 		return (1);

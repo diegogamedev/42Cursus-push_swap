@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 19:59:10 by dienasci          #+#    #+#             */
-/*   Updated: 2022/01/16 20:00:43 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/01/23 17:09:25 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,22 +46,35 @@ static size_t	remove_head(int ***array, size_t og_sz)
 	return (og_sz - 1);
 }
 
-void	push_a(int **a, size_t sza, int **b, size_t szb)
+void	push_a(int **a, size_t *sza, int **b, size_t *szb)
 {
 	write(1, "pa\n", 4);
-	if (szb != 0)
+	if (*szb != 0)
 	{
-		insert_at(&a, sza, (*b)[0], 0);
-		remove_head(&b, szb);
+		*sza = insert_at(&a, *sza, (*b)[0], 0);
+		*szb = remove_head(&b, *szb);
 	}
 }
 
-void	push_b(int **a, size_t sza, int **b, size_t szb)
+void	push_b(int **a, size_t *sza, int **b, size_t *szb)
 {
 	write(1, "pb\n", 4);
-	if (sza != 0)
+	if (*sza != 0)
 	{
-		insert_at(&b, szb, (*a)[0], 0);
-		remove_head(&a, sza);
+		write(1, "inserting\n", 11);
+		*szb = insert_at(&b, *szb, (*a)[0], 0);
+		write(1, "removing\n", 10);
+		*sza = remove_head(&a, *sza);
+	}
+}
+
+void	push_a_until_empty(int **a, size_t *sza, int **b, size_t *szb)
+{
+	while (1)
+	{
+		if (*szb != 0)
+			push_a(&(*a), &(*sza), &(*b), &(*szb));
+		else
+			break ;
 	}
 }
