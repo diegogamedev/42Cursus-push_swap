@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:08:07 by dienasci          #+#    #+#             */
-/*   Updated: 2022/01/23 16:19:31 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/01/23 17:18:02 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ void	sort_ten(int *a, size_t a_size, int *b, size_t b_size)
 			rotate_a(&a, 0, a_size);
 		else
 			reverse_rotate_a(&a, 0, a_size);
-		sleep(1);
 	}
 }
 

@@ -1,0 +1,356 @@
+==61374== Memcheck, a memory error detector
+==61374== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==61374== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==61374== Command: ./push_swap 3 5 1 2 4
+==61374== Parent PID: 4022
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x483E842: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==61374==    by 0x10B2DF: setup (main.c:76)
+==61374==    by 0x10B40D: main (main.c:103)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10B0B5: print_array (main.c:22)
+==61374==    by 0x10B424: main (main.c:104)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10AFE2: is_sorted (aux.c:52)
+==61374==    by 0x10B7EC: sort (sort.c:92)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10B7FA: sort (sort.c:94)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10B818: sort (sort.c:96)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10B834: sort (sort.c:98)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10AFE2: is_sorted (aux.c:52)
+==61374==    by 0x10B5E6: sort_ten (sort.c:46)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10B601: sort_ten (sort.c:48)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10B63F: sort_ten (sort.c:53)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10AF30: find_smallest_number (aux.c:23)
+==61374==    by 0x10B69A: sort_ten (sort.c:59)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10B70D: sort_ten (sort.c:64)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Use of uninitialised value of size 8
+==61374==    at 0x10950C: reverse_rotate_a (reverse_rotate.c:22)
+==61374==    by 0x10B73D: sort_ten (sort.c:67)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x109554: reverse_rotate_a (reverse_rotate.c:24)
+==61374==    by 0x10B73D: sort_ten (sort.c:67)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Use of uninitialised value of size 8
+==61374==    at 0x109548: reverse_rotate_a (reverse_rotate.c:26)
+==61374==    by 0x10B73D: sort_ten (sort.c:67)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Use of uninitialised value of size 8
+==61374==    at 0x10954A: reverse_rotate_a (reverse_rotate.c:26)
+==61374==    by 0x10B73D: sort_ten (sort.c:67)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x109438: push_b (push.c:62)
+==61374==    by 0x10B6C0: sort_ten (sort.c:61)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x483E842: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==61374==    by 0x1092BE: remove_head (push.c:39)
+==61374==    by 0x109477: push_b (push.c:65)
+==61374==    by 0x10B6C0: sort_ten (sort.c:61)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10A0B7: ft_memcpy (ft_memcpy.c:26)
+==61374==    by 0x1092E7: remove_head (push.c:40)
+==61374==    by 0x109477: push_b (push.c:65)
+==61374==    by 0x10B6C0: sort_ten (sort.c:61)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x483E842: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==61374==    by 0x109314: remove_head (push.c:42)
+==61374==    by 0x109477: push_b (push.c:65)
+==61374==    by 0x10B6C0: sort_ten (sort.c:61)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10935C: remove_head (push.c:43)
+==61374==    by 0x109477: push_b (push.c:65)
+==61374==    by 0x10B6C0: sort_ten (sort.c:61)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Invalid read of size 4
+==61374==    at 0x109349: remove_head (push.c:44)
+==61374==    by 0x109477: push_b (push.c:65)
+==61374==    by 0x10B6C0: sort_ten (sort.c:61)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Address 0x4a4a8a4 is 0 bytes after a block of size 20 alloc'd
+==61374==    at 0x483E899: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==61374==    by 0x1092BE: remove_head (push.c:39)
+==61374==    by 0x109477: push_b (push.c:65)
+==61374==    by 0x10B6C0: sort_ten (sort.c:61)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374== 
+==61374== Invalid write of size 4
+==61374==    at 0x10934B: remove_head (push.c:44)
+==61374==    by 0x109477: push_b (push.c:65)
+==61374==    by 0x10B6C0: sort_ten (sort.c:61)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Address 0x4a4a900 is 0 bytes after a block of size 16 alloc'd
+==61374==    at 0x483E899: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==61374==    by 0x109314: remove_head (push.c:42)
+==61374==    by 0x109477: push_b (push.c:65)
+==61374==    by 0x10B6C0: sort_ten (sort.c:61)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10AFE2: is_sorted (aux.c:52)
+==61374==    by 0x10B615: sort_ten (sort.c:48)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10AFE2: is_sorted (aux.c:52)
+==61374==    by 0x10B653: sort_ten (sort.c:53)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10B05A: is_backwards_sorted (aux.c:69)
+==61374==    by 0x10B48C: sort_three (sort.c:20)
+==61374==    by 0x10B66A: sort_ten (sort.c:55)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x109797: swap_a (swap.c:23)
+==61374==    by 0x10B596: sort_three (sort.c:33)
+==61374==    by 0x10B66A: sort_ten (sort.c:55)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x483E842: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==61374==    by 0x1091C6: insert_at (push.c:22)
+==61374==    by 0x1093D5: push_a (push.c:54)
+==61374==    by 0x1094BD: push_a_until_empty (push.c:74)
+==61374==    by 0x10B682: sort_ten (sort.c:56)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10A0B7: ft_memcpy (ft_memcpy.c:26)
+==61374==    by 0x1091EF: insert_at (push.c:23)
+==61374==    by 0x1093D5: push_a (push.c:54)
+==61374==    by 0x1094BD: push_a_until_empty (push.c:74)
+==61374==    by 0x10B682: sort_ten (sort.c:56)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x483E842: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==61374==    by 0x10921C: insert_at (push.c:25)
+==61374==    by 0x1093D5: push_a (push.c:54)
+==61374==    by 0x1094BD: push_a_until_empty (push.c:74)
+==61374==    by 0x10B682: sort_ten (sort.c:56)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10927B: insert_at (push.c:27)
+==61374==    by 0x1093D5: push_a (push.c:54)
+==61374==    by 0x1094BD: push_a_until_empty (push.c:74)
+==61374==    by 0x10B682: sort_ten (sort.c:56)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Invalid read of size 4
+==61374==    at 0x109349: remove_head (push.c:44)
+==61374==    by 0x1093F2: push_a (push.c:55)
+==61374==    by 0x1094BD: push_a_until_empty (push.c:74)
+==61374==    by 0x10B682: sort_ten (sort.c:56)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Address 0x4a4ab28 is 0 bytes after a block of size 8 alloc'd
+==61374==    at 0x483E899: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==61374==    by 0x1092BE: remove_head (push.c:39)
+==61374==    by 0x1093F2: push_a (push.c:55)
+==61374==    by 0x1094BD: push_a_until_empty (push.c:74)
+==61374==    by 0x10B682: sort_ten (sort.c:56)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374== 
+==61374== Invalid write of size 4
+==61374==    at 0x10934B: remove_head (push.c:44)
+==61374==    by 0x1093F2: push_a (push.c:55)
+==61374==    by 0x1094BD: push_a_until_empty (push.c:74)
+==61374==    by 0x10B682: sort_ten (sort.c:56)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Address 0x4a4ab74 is 0 bytes after a block of size 4 alloc'd
+==61374==    at 0x483E899: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==61374==    by 0x109314: remove_head (push.c:42)
+==61374==    by 0x1093F2: push_a (push.c:55)
+==61374==    by 0x1094BD: push_a_until_empty (push.c:74)
+==61374==    by 0x10B682: sort_ten (sort.c:56)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374== 
+==61374== Conditional jump or move depends on uninitialised value(s)
+==61374==    at 0x10B0B5: print_array (main.c:22)
+==61374==    by 0x10B44E: main (main.c:106)
+==61374==  Uninitialised value was created by a stack allocation
+==61374==    at 0x10B3CD: main (main.c:94)
+==61374== 
+==61374== Invalid read of size 4
+==61374==    at 0x10B090: print_array (main.c:24)
+==61374==    by 0x10B44E: main (main.c:106)
+==61374==  Address 0x4a4a040 is 0 bytes inside a block of size 20 free'd
+==61374==    at 0x484127F: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==61374==    by 0x1092F9: remove_head (push.c:41)
+==61374==    by 0x109477: push_b (push.c:65)
+==61374==    by 0x10B6C0: sort_ten (sort.c:61)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374==  Block was alloc'd at
+==61374==    at 0x483E899: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==61374==    by 0x10B2DF: setup (main.c:76)
+==61374==    by 0x10B40D: main (main.c:103)
+==61374== 
+==61374== 
+==61374== HEAP SUMMARY:
+==61374==     in use at exit: 110 bytes in 12 blocks
+==61374==   total heap usage: 28 allocs, 16 frees, 1,294 bytes allocated
+==61374== 
+==61374== 0 bytes in 1 blocks are definitely lost in loss record 1 of 4
+==61374==    at 0x483E899: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==61374==    by 0x109314: remove_head (push.c:42)
+==61374==    by 0x1093F2: push_a (push.c:55)
+==61374==    by 0x1094BD: push_a_until_empty (push.c:74)
+==61374==    by 0x10B682: sort_ten (sort.c:56)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374== 
+==61374== 20 bytes in 1 blocks are definitely lost in loss record 3 of 4
+==61374==    at 0x483E899: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==61374==    by 0x10921C: insert_at (push.c:25)
+==61374==    by 0x1093D5: push_a (push.c:54)
+==61374==    by 0x1094BD: push_a_until_empty (push.c:74)
+==61374==    by 0x10B682: sort_ten (sort.c:56)
+==61374==    by 0x10B84E: sort (sort.c:99)
+==61374==    by 0x10B43B: main (main.c:105)
+==61374== 
+==61374== 90 (80 direct, 10 indirect) bytes in 5 blocks are definitely lost in loss record 4 of 4
+==61374==    at 0x483E899: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==61374==    by 0x10A670: ft_split (ft_split.c:86)
+==61374==    by 0x10B313: setup (main.c:80)
+==61374==    by 0x10B40D: main (main.c:103)
+==61374== 
+==61374== LEAK SUMMARY:
+==61374==    definitely lost: 100 bytes in 7 blocks
+==61374==    indirectly lost: 10 bytes in 5 blocks
+==61374==      possibly lost: 0 bytes in 0 blocks
+==61374==    still reachable: 0 bytes in 0 blocks
+==61374==         suppressed: 0 bytes in 0 blocks
+==61374== 
+==61374== For lists of detected and suppressed errors, rerun with: -s
+==61374== ERROR SUMMARY: 236 errors from 37 contexts (suppressed: 0 from 0)

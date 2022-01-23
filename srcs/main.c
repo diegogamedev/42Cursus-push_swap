@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:01:45 by dienasci          #+#    #+#             */
-/*   Updated: 2022/01/23 17:05:47 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/01/23 17:33:02 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ int	*setup(char **args, size_t *size)
 	int		*final;
 	int		i[3];
 
+	final = 0;
 	i[0] = 0;
 	i[1] = 0;
 	i[2] = 0;
@@ -95,9 +96,11 @@ int	main(int argc, char **argv)
 	int		*b;
 	size_t	size;
 
+	(void)b;
 	(void)argc;
-	a = setup(argv, &size);
+	a = 0;
 	b = 0;
+	a = setup(argv, &size);
 	print_array(a, size);
 	sort(a, b, size);
 	print_array(a, size);
