@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:01:45 by dienasci          #+#    #+#             */
-/*   Updated: 2022/01/23 17:33:02 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/01/23 17:57:41 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	print_array(int *a, size_t size)
 	i = 0;
 	while ((size_t)i < size)
 	{
-		printf("[%d] ", a[i]);
+		printf("[%d]", a[i]);
 		i++;
 	}
 	printf("\n");
@@ -100,6 +100,7 @@ int	main(int argc, char **argv)
 	(void)argc;
 	a = 0;
 	b = 0;
+	size = 0;
 	a = setup(argv, &size);
 	print_array(a, size);
 	sort(a, b, size);

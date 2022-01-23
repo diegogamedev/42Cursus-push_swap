@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 19:59:10 by dienasci          #+#    #+#             */
-/*   Updated: 2022/01/23 17:33:23 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/01/23 17:49:02 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static size_t	remove_head(int ***array, size_t og_sz)
 	ft_memcpy(hold, (*(*array)), og_sz * sizeof(int));
 	free((*(*array)));
 	(*(*array)) = malloc((og_sz - 1) * sizeof(int));
-	while ((size_t)i++ < (og_sz))
+	while ((size_t)i++ < (og_sz - 1))
 		(*(*array))[i - 1] = hold[i];
 	free(hold);
 	return (og_sz - 1);
