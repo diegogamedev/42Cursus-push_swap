@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:08:07 by dienasci          #+#    #+#             */
-/*   Updated: 2022/01/23 17:18:02 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/06 12:31:55 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ void	sort_default(int *a, size_t a_size, int *b, size_t b_size)
 	write(1, "PANIC!\n", 8);
 }
 
+//this is a test
 void	sort(int *a, int *b, size_t size)
 {
 	(void)b;
