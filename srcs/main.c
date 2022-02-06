@@ -6,26 +6,13 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:01:45 by dienasci          #+#    #+#             */
-/*   Updated: 2022/01/23 17:57:41 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/06 12:25:50 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 #include "../includes/libft.h"
 #include <stdio.h>
-
-void	print_array(int *a, size_t size)
-{
-	int	i;
-
-	i = 0;
-	while ((size_t)i < size)
-	{
-		printf("[%d]", a[i]);
-		i++;
-	}
-	printf("\n");
-}
 
 int	is_valid(int c)
 {
@@ -59,6 +46,26 @@ int	count(const char *s)
 			i++;
 	}
 	return (count);
+}
+
+int	check_for_repetition(int *a, size_t size)
+{
+	size_t	index;
+	size_t	aux;
+
+	index = 0;
+	while (index < size)
+	{
+		aux = size - 1;
+		while (aux > index)
+		{
+			if (a[index] == a[aux])
+				return (0);
+			aux--;
+		}
+		index++;
+	}
+	return (1);
 }
 
 int	*setup(char **args, size_t *size)
@@ -102,7 +109,16 @@ int	main(int argc, char **argv)
 	b = 0;
 	size = 0;
 	a = setup(argv, &size);
-	print_array(a, size);
-	sort(a, b, size);
-	print_array(a, size);
+	if (check_for_repetition(a, size))
+	{
+		print_array(a, size);
+		sort(a, b, size);
+		print_array(a, size);
+	}
+	else
+		write(1, "Error.\n", 8);
+	if (a)
+		free(a);
+	if (b)
+		free(b);
 }

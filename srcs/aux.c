@@ -6,12 +6,13 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 11:31:06 by dienasci          #+#    #+#             */
-/*   Updated: 2022/01/23 16:18:48 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/06 12:25:21 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 #include "../includes/libft.h"
+#include <stdio.h>
 
 int	find_smallest_number(int *list, size_t size)
 {
@@ -74,4 +75,17 @@ int	is_backwards_sorted(int *a, size_t size)
 			temp = a[index];
 	}
 	return (1);
+}
+
+void	print_array(int *a, size_t size)
+{
+	int	i;
+
+	i = 0;
+	while ((size_t)i < size)
+	{
+		printf("[%d]", a[i]);
+		i++;
+	}
+	printf("\n");
 }
