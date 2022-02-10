@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:08:07 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/06 12:33:24 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/06 13:03:18 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void	sort_ten(int *a, size_t a_size, int *b, size_t b_size)
 	final_size = a_size;
 	while (1)
 	{
+		printf("new cycle: a address: %p, b address: %p\n", a, b);
 		if (is_sorted(a, a_size) && a_size == final_size)
 			break ;
 		else if (a_size != final_size && is_sorted(a, a_size))
@@ -86,7 +87,6 @@ void	sort_default(int *a, size_t a_size, int *b, size_t b_size)
 	write(1, "PANIC!\n", 8);
 }
 
-//this is a test again
 void	sort(int *a, int *b, size_t size)
 {
 	(void)b;
