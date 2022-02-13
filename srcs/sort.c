@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:08:07 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/06 13:03:18 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/12 22:16:43 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	sort_three(int *a, size_t a_size)
 		reverse_rotate_a(&a, 0, a_size);
 }
 
-void	sort_ten(int *a, size_t a_size, int *b, size_t b_size)
+int*	sort_ten(int *a, size_t a_size, int *b, size_t b_size)
 {
 	size_t	final_size;
 	int		pivot;
@@ -43,19 +43,22 @@ void	sort_ten(int *a, size_t a_size, int *b, size_t b_size)
 	final_size = a_size;
 	while (1)
 	{
-		printf("new cycle: a address: %p, b address: %p\n", a, b);
+		//if(a) print_array(a, a_size, "(sort) A stack: ");
+		//if(b) print_array(b, b_size, "(sort) B stack: ");
 		if (is_sorted(a, a_size) && a_size == final_size)
-			break ;
+			return a;
 		else if (a_size != final_size && is_sorted(a, a_size))
 		{
 			push_a_until_empty(&a, &a_size, &b, &b_size);
-			break ;
+			//print_array(a, a_size, "(sort) A stack: ");
+			return a;
 		}
 		else if (a_size == 3 && !is_sorted(a, a_size))
 		{
 			sort_three(a, a_size);
 			push_a_until_empty(&a, &a_size, &b, &b_size);
-			break ;
+			//print_array(a, a_size, "(sort) A stack: ");
+			return a;
 		}
 		pivot = find_smallest_number(a, a_size);
 		if (a[0] == pivot)
@@ -69,37 +72,41 @@ void	sort_ten(int *a, size_t a_size, int *b, size_t b_size)
 	}
 }
 
-void	sort_hundred(int *a, size_t a_size, int *b, size_t b_size)
+int*	sort_hundred(int *a, size_t a_size, int *b, size_t b_size)
 {
 	(void)a;
 	(void)b;
 	a_size++;
 	b_size++;
 	write(1, "PANIC!\n", 8);
+	return NULL;
 }
 
-void	sort_default(int *a, size_t a_size, int *b, size_t b_size)
+int*	sort_default(int *a, size_t a_size, int *b, size_t b_size)
 {
 	(void)a;
 	(void)b;
 	a_size++;
 	b_size++;
 	write(1, "PANIC!\n", 8);
+	return NULL;
 }
 
-void	sort(int *a, int *b, size_t size)
+int*	sort(int *a, int *b, size_t size)
 {
 	(void)b;
 	if (is_sorted(a, size))
-		return ;
+		return a;
 	if (size == 2)
 		rotate_a(&a, 0, size);
 	else if (size == 3)
 		sort_three(a, size);
 	else if (size <= 10)
-		sort_ten(a, size, b, 0);
+		return sort_ten(a, size, b, 0);
 	else if (size)
-		sort_hundred(a, size, b, 0);
+		return sort_hundred(a, size, b, 0);
 	else
-		sort_default(a, size, b, 0);
+		return sort_default(a, size, b, 0);
+
+	return a;
 }

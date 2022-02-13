@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 11:31:06 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/06 12:25:21 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/12 11:44:57 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,11 +77,13 @@ int	is_backwards_sorted(int *a, size_t size)
 	return (1);
 }
 
-void	print_array(int *a, size_t size)
+void	print_array(int *a, size_t size, const char *id)
 {
 	int	i;
 
 	i = 0;
+	printf("%s", id);
+	printf("%p:", a);
 	while ((size_t)i < size)
 	{
 		printf("[%d]", a[i]);

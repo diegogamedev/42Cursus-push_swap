@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 19:59:10 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/06 13:04:53 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/12 22:13:40 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ static size_t	insert_at(int ***array, size_t og_sz, int value, int index)
 	i = 0;
 	hold = malloc(og_sz * sizeof(int));
 	ft_memcpy(hold, (*(*array)), og_sz * sizeof(int));
-	printf("inside address: %p hold address %p\n", **array, hold);
 	free((*(*array)));
 	(*(*array)) = malloc((og_sz + 1) * sizeof(int));
 	(*(*array))[index] = value;
@@ -40,7 +39,6 @@ static size_t	remove_head(int ***array, size_t og_sz)
 	i = 0;
 	hold = malloc(og_sz * sizeof(int));
 	ft_memcpy(hold, (*(*array)), og_sz * sizeof(int));
-	printf("inside address: %p hold address %p\n", **array, hold);
 	free((*(*array)));
 	(*(*array)) = malloc((og_sz - 1) * sizeof(int));
 	while ((size_t)i++ < (og_sz - 1))
@@ -54,11 +52,8 @@ void	push_a(int **a, size_t *sza, int **b, size_t *szb)
 	write(1, "pa\n", 4);
 	if (*szb != 0)
 	{
-		printf("no operations done: a address: %p, b address: %p\n", *a, *b);
 		*sza = insert_at(&a, *sza, (*b)[0], 0);
-		printf("after insertion on a: a address: %p, b address: %p\n", *a, *b);
 		*szb = remove_head(&b, *szb);
-		printf("after removing b head: a address: %p, b address: %p\n", *a, *b);
 	}
 }
 
@@ -67,11 +62,8 @@ void	push_b(int **a, size_t *sza, int **b, size_t *szb)
 	write(1, "pb\n", 4);
 	if (*sza != 0)
 	{
-		printf("no operations done: a address: %p, b address: %p\n", *a, *b);
 		*szb = insert_at(&b, *szb, (*a)[0], 0);
-		printf("after insertion on b: a address: %p, b address: %p\n", *a, *b);
 		*sza = remove_head(&a, *sza);
-		printf("after removing a head: a address: %p, b address: %p\n", *a, *b);
 	}
 }
 

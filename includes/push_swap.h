@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 19:57:55 by dienasci          #+#    #+#             */
-/*   Updated: 2022/01/23 15:13:12 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/12 21:21:08 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	rotate_rotate(int **a, int **b, size_t size);
 void	reverse_rotate_a(int **a, int silent, size_t size);
 void	reverse_rotate_b(int **b, int silent, size_t size);
 void	reverse_rotate_rotate(int **a, int **b, size_t size);
-void	print_array(int *a, size_t size);
-void	sort(int *a, int *b, size_t size);
+void	print_array(int *a, size_t size, const char *id); //Remove this
+int*	sort(int *a, int *b, size_t size);
 int		is_sorted(int *a, size_t size);
 int		is_backwards_sorted(int *a, size_t size);
 int		find_smallest_number(int *list, size_t size);

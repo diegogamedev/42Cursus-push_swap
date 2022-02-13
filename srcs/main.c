@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:01:45 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/07 21:52:23 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/12 22:13:20 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,9 +111,9 @@ int	main(int argc, char **argv)
 	a = setup(argv, &size);
 	if (check_for_repetition(a, size))
 	{
-		print_array(a, size);
-		sort(a, b, size);
-		print_array(a, size);
+		//print_array(a, size, "(main) A stack: ");
+		a = sort(a, b, size);
+		//print_array(a, size, "(main) A stack: ");
 	}
 	else
 		write(1, "Error.\n", 8);
