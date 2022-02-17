@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:08:07 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/12 22:16:43 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/13 16:33:47 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,5 +108,6 @@ int*	sort(int *a, int *b, size_t size)
 	else
 		return sort_default(a, size, b, 0);
 
+	if(b) free(b);
 	return a;
 }

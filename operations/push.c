@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 19:59:10 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/12 22:13:40 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/16 23:05:55 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ static size_t	remove_head(int ***array, size_t og_sz)
 
 void	push_a(int **a, size_t *sza, int **b, size_t *szb)
 {
-	write(1, "pa\n", 4);
 	if (*szb != 0)
 	{
+		write(1, "pa\n", 4);
 		*sza = insert_at(&a, *sza, (*b)[0], 0);
 		*szb = remove_head(&b, *szb);
 	}
@@ -59,9 +59,9 @@ void	push_a(int **a, size_t *sza, int **b, size_t *szb)
 
 void	push_b(int **a, size_t *sza, int **b, size_t *szb)
 {
-	write(1, "pb\n", 4);
 	if (*sza != 0)
 	{
+		write(1, "pb\n", 4);
 		*szb = insert_at(&b, *szb, (*a)[0], 0);
 		*sza = remove_head(&a, *sza);
 	}
@@ -76,4 +76,5 @@ void	push_a_until_empty(int **a, size_t *sza, int **b, size_t *szb)
 		else
 			break ;
 	}
+	free(*b);
 }

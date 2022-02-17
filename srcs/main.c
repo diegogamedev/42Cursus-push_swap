@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:01:45 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/12 22:13:20 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/16 22:38:02 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ int	*setup(char **args, size_t *size)
 		}
 		i[0]++;
 		i[1] = 0;
+		free_2d_array(s);
 	}
 	return (final);
 }
@@ -101,24 +102,18 @@ int	main(int argc, char **argv)
 {
 	int		*a;
 	int		*b;
+	int		*temp;
 	size_t	size;
 
-	(void)b;
-	(void)argc;
+	if(argc <= 1)
+		exit(EXIT_FAILURE);
 	a = 0;
 	b = 0;
 	size = 0;
-	a = setup(argv, &size);
-	if (check_for_repetition(a, size))
-	{
-		//print_array(a, size, "(main) A stack: ");
-		a = sort(a, b, size);
-		//print_array(a, size, "(main) A stack: ");
-	}
+	temp = setup(argv, &size);
+	if (check_for_repetition(temp, size))
+		a = sort(temp, b, size);
 	else
 		write(1, "Error.\n", 8);
-	if (a)
-		free(a);
-	if (b)
-		free(b);
+	free(a);
 }

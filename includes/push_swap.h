@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 19:57:55 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/12 21:21:08 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/13 22:15:09 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int		is_sorted(int *a, size_t size);
 int		is_backwards_sorted(int *a, size_t size);
 int		find_smallest_number(int *list, size_t size);
 size_t	get_index(int *list, int element);
+void	free_2d_array(char **a);
 void	push_a_until_empty(int **a, size_t *sza, int **b, size_t *szb);
 
 #endif
