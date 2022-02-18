@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 19:57:55 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/13 22:15:09 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/17 22:25:04 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,13 @@ int		find_smallest_number(int *list, size_t size);
 size_t	get_index(int *list, int element);
 void	free_2d_array(char **a);
 void	push_a_until_empty(int **a, size_t *sza, int **b, size_t *szb);
+
+//Libft
+int		ft_atoi(const char *str);
+void *ft_memset(void *s, int c, size_t len);
+void *ft_calloc(size_t nmemb, size_t size);
+int		ft_isspace(int c);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+char	**ft_split(char const *s, char c);
 
 #endif

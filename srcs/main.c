@@ -6,12 +6,11 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:01:45 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/17 09:08:38 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/17 22:26:07 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-#include "../includes/libft.h"
 #include <stdio.h>
 
 int	is_valid(int c)
@@ -80,7 +79,7 @@ int	*setup(char **args, size_t *size)
 	i[2] = 0;
 	while (args[i[0]++] != 0)
 		*size += count(args[i[0]]);
-	final = malloc(*size * sizeof(int));
+	final = ft_calloc(*size, sizeof(int));
 	i[0] = 1;
 	while (args[i[0]])
 	{
@@ -112,7 +111,11 @@ int	main(int argc, char **argv)
 	size = 0;
 	temp = setup(argv, &size);
 	if (check_for_repetition(temp, size))
+	{
+		print_array(temp, size, "Before sorting: ");
 		a = sort(temp, b, size);
+		print_array(a, size, "After Sorting: ");
+	}
 	else
 	{
 		free(temp);

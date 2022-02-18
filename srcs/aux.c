@@ -6,12 +6,11 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 11:31:06 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/12 11:44:57 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/17 22:20:26 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-#include "../includes/libft.h"
 #include <stdio.h>
 
 int	find_smallest_number(int *list, size_t size)

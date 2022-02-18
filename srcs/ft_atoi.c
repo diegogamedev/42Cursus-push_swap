@@ -6,11 +6,11 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/12 20:55:38 by dienasci          #+#    #+#             */
-/*   Updated: 2022/01/23 15:24:36 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/17 22:22:43 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/push_swap.h"
 
 int	ft_isspace(int c)
 {

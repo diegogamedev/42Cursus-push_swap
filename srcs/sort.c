@@ -6,12 +6,11 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:08:07 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/13 16:33:47 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/17 22:20:34 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-#include "../includes/libft.h"
 #include <stdio.h>
 
 //Hard-coded the 5 possible cases (could be better)

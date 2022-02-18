@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/17 10:18:03 by dienasci          #+#    #+#             */
-/*   Updated: 2022/01/11 22:30:05 by dienasci         ###   ########.fr       */
+/*   Created: 2021/08/12 20:59:03 by dienasci          #+#    #+#             */
+/*   Updated: 2022/02/17 22:23:12 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/push_swap.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	t_list	*current;
+	void	*ptr;
 
-	if (lst)
-	{
-		while (*lst)
-		{
-			current = (*lst)->next;
-			ft_lstdelone(*lst, del);
-			(*lst) = current;
-		}
-	}
+	ptr = malloc(nmemb * size);
+	if (!ptr)
+		return (0);
+	ft_memset(ptr, 0, (nmemb * size));
+	return (ptr);
 }

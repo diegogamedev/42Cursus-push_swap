@@ -6,11 +6,11 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/12 21:15:55 by dienasci          #+#    #+#             */
-/*   Updated: 2022/01/11 22:30:05 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/17 22:23:19 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/push_swap.h"
 
 static int	unleah(char **str, int size)
 {

@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/12 21:04:32 by dienasci          #+#    #+#             */
-/*   Updated: 2022/01/11 22:30:05 by dienasci         ###   ########.fr       */
+/*   Created: 2021/08/12 21:04:38 by dienasci          #+#    #+#             */
+/*   Updated: 2022/02/17 22:23:16 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/push_swap.h"
 
-int	ft_memcmp(void	*str1, void	*str2, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*aux1;
-	unsigned char	*aux2;
+	unsigned char	*csrc;
+	unsigned char	*cdest;
 	size_t			index;
 
-	aux1 = (unsigned char *)str1;
-	aux2 = (unsigned char *)str2;
+	if (!dest && !src)
+		return (NULL);
+	csrc = (unsigned char *)src;
+	cdest = (unsigned char *)dest;
 	index = 0;
-	if (aux1 == aux2)
-		return (0);
 	while (index < n)
 	{
-		if (aux1[index] != aux2[index])
-			return (aux1[index] - aux2[index]);
+		cdest[index] = csrc[index];
 		index++;
 	}
-	return (0);
+	return (dest);
 }

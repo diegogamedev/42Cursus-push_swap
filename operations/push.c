@@ -6,12 +6,11 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 19:59:10 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/16 23:05:55 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/17 22:20:43 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-#include "../includes/libft.h"
 #include <stdio.h>
 
 static size_t	insert_at(int ***array, size_t og_sz, int value, int index)
