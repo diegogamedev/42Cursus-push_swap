@@ -6,12 +6,11 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 19:59:10 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/17 22:20:43 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/20 18:44:28 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-#include <stdio.h>
 
 static size_t	insert_at(int ***array, size_t og_sz, int value, int index)
 {
@@ -19,7 +18,7 @@ static size_t	insert_at(int ***array, size_t og_sz, int value, int index)
 	int	i;
 
 	i = 0;
-	hold = malloc(og_sz * sizeof(int));
+	hold = ft_calloc(og_sz, sizeof(int));
 	ft_memcpy(hold, (*(*array)), og_sz * sizeof(int));
 	free((*(*array)));
 	(*(*array)) = malloc((og_sz + 1) * sizeof(int));
@@ -36,7 +35,7 @@ static size_t	remove_head(int ***array, size_t og_sz)
 	int	i;
 
 	i = 0;
-	hold = malloc(og_sz * sizeof(int));
+	hold = ft_calloc(og_sz, sizeof(int));
 	ft_memcpy(hold, (*(*array)), og_sz * sizeof(int));
 	free((*(*array)));
 	(*(*array)) = malloc((og_sz - 1) * sizeof(int));

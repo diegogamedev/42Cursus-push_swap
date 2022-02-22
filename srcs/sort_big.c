@@ -1,47 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   sort_big.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/13 16:18:06 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/20 18:41:07 by dienasci         ###   ########.fr       */
+/*   Created: 2022/02/20 13:58:15 by dienasci          #+#    #+#             */
+/*   Updated: 2022/02/20 14:02:46 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-#include <stdio.h>
 
-void	free_2d_array(char **a)
+int	*sort_big(int *a, size_t a_size, int *b, size_t b_size)
 {
-	int	i;
-
-	i = 0;
-	while (a[i])
-	{
-		free(a[i]);
-		i++;
-	}
-	free(a);
-}
-
-void	print_array(int *a, size_t size, const char *id)
-{
-	int i;
-
-	i = 0;
-	printf("%s", id);
-	printf("%p:", a);
-	if(a != NULL)
-	{
-		while ((size_t)i < size)
-		{
-			printf("[%d]", a[i]);
-			i++;
-		}
-	}
-	else
-		printf("null");
-	printf("\n");
+	(void)a;
+	(void)b;
+	a_size++;
+	b_size++;
+	write(1, "PANIC!\n", 8);
+	return NULL;
 }
