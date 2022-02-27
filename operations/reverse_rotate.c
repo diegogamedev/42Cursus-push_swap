@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 19:59:03 by dienasci          #+#    #+#             */
-/*   Updated: 2022/01/16 20:00:13 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/26 21:27:08 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,12 @@ void	reverse_rotate_b(int **b, int silent, size_t size)
 {
 	if (!silent)
 		write(1, "rrb\n", 4);
-	rotate_a(b, 1, size);
+	reverse_rotate_a(b, 1, size);
 }
 
 void	reverse_rotate_rotate(int **a, int **b, size_t size)
 {
 	write(1, "rrr\n", 4);
-	rotate_a(a, 1, size);
-	rotate_b(b, 1, size);
+	reverse_rotate_a(a, 1, size);
+	reverse_rotate_b(b, 1, size);
 }

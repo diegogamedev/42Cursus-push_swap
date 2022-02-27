@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:01:45 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/24 23:09:55 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/26 21:24:21 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,9 +112,7 @@ int	main(int argc, char **argv)
 	temp = setup(argv, &size);
 	if (check_for_repetition(temp, size))
 	{
-		//print_array(temp, size, "Before sorting: ");
 		a = sort(temp, b, size);
-		//print_array(a, size, "After Sorting: ");
 	}
 	else
 	{

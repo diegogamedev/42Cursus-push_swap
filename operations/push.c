@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 19:59:10 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/20 18:44:28 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/26 13:28:45 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	push_a(int **a, size_t *sza, int **b, size_t *szb)
 {
 	if (*szb != 0)
 	{
-		write(1, "pa\n", 4);
+		write(1, "pa\n", 3);
 		*sza = insert_at(&a, *sza, (*b)[0], 0);
 		*szb = remove_head(&b, *szb);
 	}
@@ -59,7 +59,7 @@ void	push_b(int **a, size_t *sza, int **b, size_t *szb)
 {
 	if (*sza != 0)
 	{
-		write(1, "pb\n", 4);
+		write(1, "pb\n", 3);
 		*szb = insert_at(&b, *szb, (*a)[0], 0);
 		*sza = remove_head(&a, *sza);
 	}

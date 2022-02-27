@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 19:57:55 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/20 18:17:48 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/02/26 14:46:48 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,16 @@ void	print_array(int *a, size_t size, const char *id); //Remove this
 //Auxiliars
 int		is_sorted(int *a, size_t size);
 int		is_backwards_sorted(int *a, size_t size);
+int		contains(int *array, int elem, size_t size);
+
+//Getters/Finders
 int		find_smallest_number(int *list, size_t size);
+int		find_biggest_number(int *list, size_t size);
 size_t	get_index(int *list, int element);
+
+//Utils
 void	free_2d_array(char **a);
 void	push_a_until_empty(int **a, size_t *sza, int **b, size_t *szb);
-int		contains(int *array, int elem, size_t size);
 
 // Libft
 int ft_atoi(const char *str);
