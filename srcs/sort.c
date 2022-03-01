@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:01:02 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/20 16:51:52 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/03/01 12:51:17 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	*sort(int *a, int *b, size_t size)
 		sort_three(a, size);
 	else if (size <= 10)
 		return (sort_ten(a, size, b, 0));
-	else if (size)
+	else if (size <= 100)
 		return (sort_hundred(a, size, b, 0));
 	else
 		return (sort_big(a, size, b, 0));
