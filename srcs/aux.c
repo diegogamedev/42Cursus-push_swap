@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 11:31:06 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/26 14:45:26 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:07:50 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	contains(int *array, int elem, size_t size)
 	size_t	index;
 
 	index = 0;
-	while(index < size)
+	while (index < size)
 	{
 		if (array[index] == elem)
 			return (1);
@@ -59,4 +59,3 @@ int	contains(int *array, int elem, size_t size)
 	}
 	return (0);
 }
-

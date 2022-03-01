@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/12 21:15:55 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/17 22:23:19 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/03/01 15:06:09 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	unleah(char **str, int size)
 	return (-1);
 }
 
-int	count_words(const char *str, char charset)
+static int	count_words(const char *str, char charset)
 {
 	int	i;
 	int	words;

@@ -6,16 +6,16 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 14:45:09 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/26 14:45:47 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:02:34 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int find_smallest_number(int *list, size_t size)
+int	find_smallest_number(int *list, size_t size)
 {
-	size_t i;
-	int hold;
+	size_t	i;
+	int		hold;
 
 	i = 0;
 	hold = list[0];
@@ -28,10 +28,10 @@ int find_smallest_number(int *list, size_t size)
 	return (hold);
 }
 
-int find_biggest_number(int *list, size_t size)
+int	find_biggest_number(int *list, size_t size)
 {
-	size_t i;
-	int hold;
+	size_t	i;
+	int		hold;
 
 	i = 0;
 	hold = list[0];
@@ -44,9 +44,9 @@ int find_biggest_number(int *list, size_t size)
 	return (hold);
 }
 
-size_t get_index(int *list, int element)
+size_t	get_index(int *list, int element)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (1)

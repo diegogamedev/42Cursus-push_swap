@@ -6,18 +6,17 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 13:58:19 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/26 21:08:38 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/03/01 15:28:28 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-#include <stdio.h>
 
 static void	push_sorting_to_a(int **a, size_t *a_size, int **b, size_t *b_size)
 {
-	int pivot;
+	int	pivot;
 
-	while((*b_size))
+	while ((*b_size))
 	{
 		pivot = find_biggest_number((*b), (*b_size));
 		while (contains((*b), pivot, (*b_size)))
@@ -35,7 +34,7 @@ static void	push_sorting_to_a(int **a, size_t *a_size, int **b, size_t *b_size)
 	}
 }
 
-static void	split(int **a, size_t *a_size, int **b, size_t *b_size, int key_nbr)
+static void	split(int **a, size_t **sizes, int **b, int key_nbr)
 {
 	int		pivot;
 	size_t	index;
@@ -43,28 +42,32 @@ static void	split(int **a, size_t *a_size, int **b, size_t *b_size, int key_nbr)
 
 	pivot = key_nbr;
 	index = 0;
-	size = *a_size;
+	size = *sizes[0];
 	while (index < size)
 	{
 		if ((*a)[0] <= pivot)
-			push_b(&(*a), &(*a_size), &(*b), &(*b_size));
+			push_b(&(*a), sizes[0], &(*b), sizes[1]);
 		else
-			rotate_a(&(*a), 0, *a_size);
+			rotate_a(&(*a), 0, *sizes[0]);
 		index++;
 	}
 }
 
-int *sort_hundred(int *a, size_t a_size, int *b, size_t b_size)
+int	*sort_hundred(int *a, size_t a_size, int *b, size_t b_size)
 {
 	int		it;
 	int		*sorted_a;
 	size_t	sorted_size;
+	size_t	**sizes;
 
+	sizes = ft_calloc(2, sizeof(size_t *));
+	sizes[0] = &a_size;
+	sizes[1] = &b_size;
 	sorted_a = get_sorted_array(a, a_size);
 	sorted_size = a_size;
 	it = 0;
-	while(it++ <= 4)
-		split(&a, &a_size, &b, &b_size, sorted_a[((sorted_size / 4) * it) - 1]);
+	while (it++ <= 4)
+		split(&a, sizes, &b, sorted_a[((sorted_size / 4) * it) - 1]);
 	push_sorting_to_a(&a, &a_size, &b, &b_size);
 	free(sorted_a);
 	return (a);

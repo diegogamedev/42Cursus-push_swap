@@ -6,12 +6,11 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:01:45 by dienasci          #+#    #+#             */
-/*   Updated: 2022/02/26 21:24:21 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/03/01 15:22:27 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-#include <stdio.h>
 
 int	is_valid(int c)
 {
@@ -71,12 +70,10 @@ int	*setup(char **args, size_t *size)
 {
 	char	**s;
 	int		*final;
-	int		i[3];
+	int		*i;
 
 	final = 0;
-	i[0] = 0;
-	i[1] = 0;
-	i[2] = 0;
+	i = ft_calloc(3, sizeof(int));
 	while (args[i[0]++] != 0)
 		*size += count(args[i[0]]);
 	final = ft_calloc(*size, sizeof(int));
@@ -94,6 +91,7 @@ int	*setup(char **args, size_t *size)
 		i[1] = 0;
 		free_2d_array(s);
 	}
+	free(i);
 	return (final);
 }
 
@@ -104,16 +102,14 @@ int	main(int argc, char **argv)
 	int		*temp;
 	size_t	size;
 
-	if(argc <= 1)
+	if (argc <= 1)
 		exit(EXIT_FAILURE);
 	a = 0;
 	b = 0;
 	size = 0;
 	temp = setup(argv, &size);
 	if (check_for_repetition(temp, size))
-	{
 		a = sort(temp, b, size);
-	}
 	else
 	{
 		free(temp);

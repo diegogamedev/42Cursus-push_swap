@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:01:02 by dienasci          #+#    #+#             */
-/*   Updated: 2022/03/01 12:51:17 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/03/01 14:07:32 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 int	*sort(int *a, int *b, size_t size)
 {
-	(void)b;
 	if (is_sorted(a, size))
-		return a;
+		return (a);
 	if (size == 2)
 		rotate_a(&a, 0, size);
 	else if (size == 3)
@@ -27,18 +26,17 @@ int	*sort(int *a, int *b, size_t size)
 		return (sort_hundred(a, size, b, 0));
 	else
 		return (sort_big(a, size, b, 0));
-
 	if (b)
 		free(b);
-	return a;
+	return (a);
 }
 
 int	*get_sorted_array(const int *sample, const size_t size)
 {
 	size_t	i;
-	int	element;
-	int	j;
-	int	*ret;
+	int		element;
+	int		j;
+	int		*ret;
 
 	i = 1;
 	ret = ft_calloc(size, sizeof(int));
