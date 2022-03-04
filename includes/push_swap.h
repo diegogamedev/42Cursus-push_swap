@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 19:57:55 by dienasci          #+#    #+#             */
-/*   Updated: 2022/03/01 15:16:57 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/03/03 23:41:00 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ int		is_sorted(int *a, size_t size);
 int		is_backwards_sorted(int *a, size_t size);
 // returns 0 if elem is not in the array
 int		contains(int *array, int elem, size_t size);
+// checks for int under or overflow
+int		check_overunderflow(char **args);
 
 //////////////////////////  * Getters
 
@@ -75,6 +77,8 @@ void	push_a_until_empty(int **a, size_t *sza, int **b, size_t *szb);
 
 // converts char to int
 int		ft_atoi(const char *str);
+// same thing as ft_atoi, but returns 1 if the number is a int
+int		ft_atoi_validator(const char *str);
 // sets len bytes of memory to c
 void	*ft_memset(void *s, int c, size_t len);
 // returns a pointer of nmemb * size bytes, with all it's values equal to zero

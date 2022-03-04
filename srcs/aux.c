@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 11:31:06 by dienasci          #+#    #+#             */
-/*   Updated: 2022/03/02 23:25:43 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/03/03 23:41:56 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,31 @@ int	contains(int *array, int elem, size_t size)
 		index++;
 	}
 	return (0);
+}
+
+int check_overunderflow(char **args)
+{
+	char	**s;
+	int		i;
+	int		j;
+
+	i = 1;
+	j = 0;
+	while (args[i])
+	{
+		s = ft_split(args[i], ' ');
+		while (s[j])
+		{
+			if (!ft_atoi_validator(s[j]))
+			{
+				free_2d_array(s);
+				return (0);
+			}
+			j++;
+		}
+		i++;
+		j = 0;
+		free_2d_array(s);
+	}
+	return (1);
 }

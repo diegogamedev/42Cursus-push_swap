@@ -11,19 +11,17 @@ srcs/sort_ten.c srcs/sort_three.c srcs/sort.c srcs/utils.c srcs/ft_atoi.c \
 srcs/ft_calloc.c srcs/ft_memcpy.c srcs/ft_memset.c srcs/ft_split.c \
 operations/push.c operations/reverse_rotate.c operations/rotate.c operations/swap.c
 
-OBJ = aux.o getters.o main.o sort_big.o sort_hundred.o sort_ten.o sort_three.o \
-sort.o utils.o ft_atoi.o ft_calloc.o ft_memcpy.o ft_memset.o ft_split.o \
-push.o reverse_rotate.o rotate.o swap.o
+OBJ = $(SRCS:.c=.o)
 
 RM = rm -rf
 
 all: $(NAME)
 
+test:
+	@printf "$(OBJ)"
+
 $(NAME): $(OBJ)
 		$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
-
-$(OBJ): $(SRCS)
-		$(CC) $(FLAGS) -c $(SRCS)
 
 clean:
 		$(RM) $(OBJ)

@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:01:45 by dienasci          #+#    #+#             */
-/*   Updated: 2022/03/01 15:22:27 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/03/03 23:36:53 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	count(const char *s)
 		}
 		else
 		{
-			write(1, "Error.\n", 8);
+			write(1, "Error\n", 6);
 			exit(1);
 		}
 		if (s[i])
@@ -108,12 +108,12 @@ int	main(int argc, char **argv)
 	b = 0;
 	size = 0;
 	temp = setup(argv, &size);
-	if (check_for_repetition(temp, size))
+	if (check_for_repetition(temp, size) && check_overunderflow(argv))
 		a = sort(temp, b, size);
 	else
 	{
 		free(temp);
-		write(1, "Error.\n", 8);
+		write(1, "Error\n", 6);
 	}
 	free(a);
 }
