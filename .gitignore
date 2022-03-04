@@ -2,4 +2,4 @@ checker_linux
 push_swap
 yes
 pyviz.py
-/.vs_code
+.vs_code/
