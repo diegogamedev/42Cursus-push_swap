@@ -6,11 +6,12 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 13:58:15 by dienasci          #+#    #+#             */
-/*   Updated: 2022/03/01 15:37:42 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/03/03 22:06:27 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+#include <stdio.h>
 
 static void	push_sorting_to_a(int **a, size_t *a_size, int **b, size_t *b_size)
 {
@@ -66,9 +67,17 @@ int	*sort_big(int *a, size_t a_size, int *b, size_t b_size)
 	sorted_a = get_sorted_array(a, a_size);
 	sorted_size = a_size;
 	it = 0;
-	while (it++ <= 8)
+	while (it++ < 8)
+	{
+		printf("iteration %d\n", it);
 		split(&a, sizes, &b, sorted_a[((sorted_size / 8) * it) - 1]);
+	}
+	if (a_size > 0)
+		while (a_size > 0)
+			push_b(&a, &a_size, &b, &b_size);
 	push_sorting_to_a(&a, &a_size, &b, &b_size);
+	free(sizes);
 	free(sorted_a);
+	free(b);
 	return (a);
 }

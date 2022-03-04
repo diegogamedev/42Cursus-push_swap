@@ -6,7 +6,7 @@
 /*   By: dienasci <dienasci@student.42sp.org.br >   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 13:58:19 by dienasci          #+#    #+#             */
-/*   Updated: 2022/03/01 15:28:28 by dienasci         ###   ########.fr       */
+/*   Updated: 2022/03/03 22:04:11 by dienasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,15 +60,20 @@ int	*sort_hundred(int *a, size_t a_size, int *b, size_t b_size)
 	size_t	sorted_size;
 	size_t	**sizes;
 
+	b = calloc(a_size, sizeof(int));
 	sizes = ft_calloc(2, sizeof(size_t *));
 	sizes[0] = &a_size;
 	sizes[1] = &b_size;
 	sorted_a = get_sorted_array(a, a_size);
 	sorted_size = a_size;
 	it = 0;
-	while (it++ <= 4)
+	while (it++ < 4)
 		split(&a, sizes, &b, sorted_a[((sorted_size / 4) * it) - 1]);
+	if (a_size != 0)
+		while (a_size != 0)
+			push_b(&a, &a_size, &b, &b_size);
 	push_sorting_to_a(&a, &a_size, &b, &b_size);
 	free(sorted_a);
+	free(sizes);
 	return (a);
 }

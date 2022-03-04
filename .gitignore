@@ -1,4 +1,5 @@
 checker_linux
 push_swap
-log
+yes
+pyviz.py
 /.vs_code
